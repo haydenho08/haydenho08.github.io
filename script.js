@@ -75,11 +75,10 @@
   function renderSkills() {
     var html = (data.skills || []).map(function (s) {
       var mono = MONO_ICONS.indexOf(s.icon) !== -1 ? ' class="mono-icon"' : "";
-      var learning = /learn/i.test(s.level || "") ? " learning" : "";
       return (
         '<li class="skill">' +
           '<span class="skill-icon"><img src="assets/icons/' + esc(s.icon) + '.svg" alt=""' + mono + ' width="26" height="26"></span>' +
-          '<span><span class="skill-name">' + esc(s.name) + '</span><br><span class="skill-level' + learning + '">' + esc(s.level) + "</span></span>" +
+          '<span class="skill-name">' + esc(s.name) + "</span>" +
         "</li>"
       );
     }).join("");

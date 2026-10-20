@@ -204,9 +204,7 @@ a:hover { color: var(--accent); }
 }
 .skill-icon img { width: 26px; height: 26px; }
 .skill-icon img.mono-icon { filter: var(--icon-mono-filter); }
-.skill-name { font-weight: 600; }
-.skill-level { font-size: .8125rem; color: var(--muted); }
-.skill-level.learning { color: var(--accent); }
+.skill-name { font-weight: 600; min-width: 0; overflow-wrap: anywhere; }
 
 /* Experience timeline */
 .timeline { list-style: none; margin: 0 0 0 6px; padding: 0; border-left: 2px solid var(--line); }

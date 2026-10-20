@@ -77,18 +77,17 @@ window.PORTFOLIO = {
   /*
     Skills
     icon:  file name in assets/icons/ (without .svg)
-    level: "Comfortable", "Learning", or anything you like
+    Logos come from devicon.dev and simpleicons.org.
   */
   skills: [
-    { name: "Python",   icon: "python",   level: "Comfortable" },
-    { name: "Java",     icon: "java",     level: "Comfortable" },
-    { name: "C",        icon: "c",        level: "Learning" },
-    { name: "Git",      icon: "git",      level: "Comfortable" },
-    { name: "GitHub",   icon: "github",   level: "Comfortable" },
-    { name: "VS Code",  icon: "vscode",   level: "Comfortable" },
-    { name: "STM32",    icon: "stm32",    level: "Learning" },
-    // Change to e.g. "42 solved" once you have a number you're happy to show
-    { name: "LeetCode", icon: "leetcode", level: "Practicing" }
+    { name: "Python",     icon: "python" },
+    { name: "Java",       icon: "java" },
+    { name: "JavaScript", icon: "javascript" },
+    { name: "C",          icon: "c" },
+    { name: "Git",        icon: "git" },
+    { name: "GitHub",     icon: "github" },
+    { name: "VS Code",    icon: "vscode" },
+    { name: "STM32",      icon: "stm32" }
   ],
 
   /*

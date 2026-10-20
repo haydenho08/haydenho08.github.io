@@ -21,7 +21,7 @@ Plain HTML, CSS and JavaScript. No build step, no frameworks.
 
 **Add your resume:** put the PDF in this folder as `resume.pdf`, then set `resume: "resume.pdf"` in `data.js`. The Resume links appear automatically.
 
-**Add a skill:** add a line to `skills`. The `icon` is a file name in `assets/icons/` (without `.svg`). Logos come from [Devicon](https://devicon.dev) and [Simple Icons](https://simpleicons.org).
+**Add a skill:** add a line to `skills`. The `icon` is a file name in `assets/icons/` (without `.svg`), so add the logo's SVG file there too. Logos come from [Devicon](https://devicon.dev) and [Simple Icons](https://simpleicons.org).
 
 **Hide anything:** set the field to `""`.
 
@@ -32,6 +32,6 @@ Open `index.html` in a browser. That's it.
 ## Deploy (GitHub Pages)
 
 1. Create a public repo named exactly `haydenho08.github.io`.
-2. Upload every file and folder here to the repo's main branch.
+2. Upload every file and folder here to the repo's main branch. Keep the folder structure: the logos must stay in `assets/icons/`.
 3. In the repo, go to **Settings → Pages** and make sure the source is **Deploy from a branch**, branch `main`, folder `/ (root)`.
 4. The site goes live at https://haydenho08.github.io within a minute or two. Every later commit redeploys it automatically.
