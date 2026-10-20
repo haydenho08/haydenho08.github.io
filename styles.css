@@ -116,13 +116,15 @@ a:hover { color: var(--accent); }
 }
 .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ok); flex: none; }
 .hero h1 { font-size: var(--step-3); line-height: 1.05; font-weight: 600; letter-spacing: -0.025em; }
-/* Waving hand: waves twice on load, and again on hover. */
+/* Waving hand: keeps waving on the same rhythm while it's on screen,
+   and pauses when scrolled out of view (script.js toggles .is-onscreen). */
 .wave {
   display: inline-block;
   transform-origin: 70% 75%;
-  animation: wave 1.8s ease-in-out .4s 2;
+  animation: wave 1.8s ease-in-out .4s infinite;
+  animation-play-state: paused;
 }
-.wave:hover { animation: wave 1.8s ease-in-out infinite; }
+.wave.is-onscreen { animation-play-state: running; }
 @keyframes wave {
   0%, 60%, 100% { transform: rotate(0deg); }
   10% { transform: rotate(14deg); }
@@ -257,5 +259,5 @@ a:hover { color: var(--accent); }
   .reveal-on [data-reveal] { opacity: 1; transform: none; transition: none; }
   html { scroll-behavior: auto; }
   body { transition: none; }
-  .wave, .wave:hover { animation: none; }
+  .wave { animation: none; }
 }

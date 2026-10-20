@@ -185,7 +185,19 @@
     root.classList.add("reveal-on");
   }
 
+  /* ---------- Waving hand ---------- */
+  // Runs the wave only while the hand is visible, so it isn't animating off screen.
+  function setupWave() {
+    var hand = document.querySelector(".wave");
+    if (!hand) return;
+    if (!("IntersectionObserver" in window)) { hand.classList.add("is-onscreen"); return; }
+    new IntersectionObserver(function (entries) {
+      hand.classList.toggle("is-onscreen", entries[0].isIntersecting);
+    }).observe(hand);
+  }
+
   renderHero();
+  setupWave();
   renderProjects();
   renderSkills();
   renderExperience();
