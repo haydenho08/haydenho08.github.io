@@ -12,6 +12,9 @@
   ============================================================
 */
 
+// Colour logos for frameworks and tools, from devicon.dev (pinned version)
+var DEVICON = "https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/";
+
 window.PORTFOLIO = {
   profile: {
     name: "Hayden Ho",
@@ -31,43 +34,43 @@ window.PORTFOLIO = {
   /*
     Projects
     status:  "In progress" or "Complete"
-    result:  one line with a real number, e.g. "Analyzed 6 flights; apogee within 2% of the altimeter's own reading"
-    image:   a screenshot in assets/projects/, e.g. "assets/projects/flight-analyzer.png"
+    result:  one line with a real number, e.g. "Monitors 120 sites per minute with 99.8% alert delivery"
+    image:   a screenshot in assets/projects/, e.g. "assets/projects/studyflow.png"
     github / demo:  links. Leave "" to hide.
   */
   projects: [
     {
-      folder: "flight-analyzer",
-      title: "Rocket Flight Data Analyzer",
+      folder: "studyflow",
+      title: "StudyFlow",
       status: "In progress",
       date: "Oct 2026",
-      summary: "Reads altimeter flight logs, finds apogee, peak velocity and acceleration, and plots the flight profile.",
+      summary: "A full-stack student productivity platform. Assignments are organized by course with deadline prioritization, study-session tracking and progress analytics, served by a FastAPI REST API backed by PostgreSQL.",
       result: "",
-      tags: ["python", "pandas", "matplotlib"],
+      tags: ["react", "typescript", "python", "fastapi", "postgresql"],
       image: "",
       github: "",
       demo: ""
     },
     {
-      folder: "tableflow",
-      title: "TableFlow",
+      folder: "pulsewatch",
+      title: "PulseWatch",
       status: "In progress",
       date: "Oct 2026",
-      summary: "A restaurant order manager for tables, orders and the kitchen queue, designed from my time working as a server.",
+      summary: "A distributed website monitoring system. Concurrent background workers run scheduled health checks from a Redis job queue, and failed checks trigger configurable retries and alerts.",
       result: "",
-      tags: ["java", "oop", "junit"],
+      tags: ["java", "spring boot", "postgresql", "redis", "docker"],
       image: "",
       github: "",
       demo: ""
     },
     {
-      folder: "stm32-logger",
-      title: "STM32 Sensor Logger",
+      folder: "gamepulse",
+      title: "GamePulse",
       status: "In progress",
       date: "Oct 2026",
-      summary: "Firmware for the NUCLEO-H723ZG that reads a sensor and streams readings over UART to a Python logger.",
+      summary: "A real-time analytics platform for Roblox games. Server-side telemetry streams gameplay events into a Node.js pipeline that aggregates player sessions, progression funnels and retention into dashboards.",
       result: "",
-      tags: ["c", "stm32", "uart", "python"],
+      tags: ["typescript", "node.js", "postgresql", "redis", "luau"],
       image: "",
       github: "",
       demo: ""
@@ -75,19 +78,55 @@ window.PORTFOLIO = {
   ],
 
   /*
-    Skills
-    icon:  file name in assets/icons/ (".svg" is assumed; include the extension for other types, e.g. "c.png")
-    Logos come from devicon.dev and simpleicons.org.
+    Skills, in groups
+    icon:  a file in assets/icons/ (".svg" is assumed; include the extension
+           for other types, e.g. "c.png"), or a full https:// link to a logo.
   */
   skills: [
-    { name: "Python",     icon: "python" },
-    { name: "Java",       icon: "java" },
-    { name: "JavaScript", icon: "javascript" },
-    { name: "C",          icon: "c.png" },
-    { name: "Git",        icon: "git" },
-    { name: "GitHub",     icon: "github" },
-    { name: "VS Code",    icon: "vscode" },
-    { name: "STM32",      icon: "stm32" }
+    {
+      group: "Languages",
+      items: [
+        { name: "Java",       icon: "java" },
+        { name: "Python",     icon: "python" },
+        { name: "C",          icon: "c.png" },
+        { name: "TypeScript", icon: DEVICON + "typescript/typescript-original.svg" },
+        { name: "JavaScript", icon: "javascript" },
+        { name: "SQL",        icon: "sql" },
+        { name: "Luau",       icon: "luau" },
+        { name: "HTML",       icon: DEVICON + "html5/html5-original.svg" },
+        { name: "CSS",        icon: DEVICON + "css3/css3-original.svg" }
+      ]
+    },
+    {
+      group: "Frameworks",
+      items: [
+        { name: "React",       icon: DEVICON + "react/react-original.svg" },
+        { name: "Node.js",     icon: DEVICON + "nodejs/nodejs-original.svg" },
+        { name: "FastAPI",     icon: DEVICON + "fastapi/fastapi-original.svg" },
+        { name: "Spring Boot", icon: DEVICON + "spring/spring-original.svg" }
+      ]
+    },
+    {
+      group: "Embedded systems",
+      items: [
+        { name: "STM32 Cortex-M7",   icon: "stm32" },
+        { name: "STM32 HAL",         icon: "stm32" },
+        { name: "GPIO · UART · I²C", icon: "chip" }
+      ]
+    },
+    {
+      group: "Developer tools",
+      items: [
+        { name: "Git",          icon: "git" },
+        { name: "GitHub",       icon: "github" },
+        { name: "Docker",       icon: DEVICON + "docker/docker-original.svg" },
+        { name: "PostgreSQL",   icon: DEVICON + "postgresql/postgresql-original.svg" },
+        { name: "Redis",        icon: DEVICON + "redis/redis-original.svg" },
+        { name: "VS Code",      icon: "vscode" },
+        { name: "STM32CubeIDE", icon: "stm32" },
+        { name: "Roblox Studio", icon: "robloxstudio" }
+      ]
+    }
   ],
 
   /*
@@ -100,9 +139,9 @@ window.PORTFOLIO = {
       logo: "assets/experience/arbalest-rocketry.png",
       emoji: "🚀",
       org: "Arbalest Rocketry",
-      role: "Payload Software",
+      role: "Payload Software Team Member",
       dates: "Sep 2026 – present",
-      summary: "Contributing to payload systems software and exploring embedded development on the STM32 NUCLEO-H723ZG."
+      summary: "Developing embedded C firmware in STM32CubeIDE for the rocket's science payload on an STM32H723 (Arm Cortex-M7), targeting the team's next Launch Canada competition. Configuring GPIO, UART and I²C with STM32 HAL as the sensor-communication foundation for payload data acquisition, and integrating changes with the payload and avionics teams through GitHub."
     },
     {
       logo: "assets/experience/cshub.png",
@@ -110,7 +149,7 @@ window.PORTFOLIO = {
       org: "CSHub",
       role: "Member",
       dates: "Sep 2026 – present",
-      summary: "York University computer science community."
+      summary: ""
     },
     {
       logo: "assets/experience/gdg-york.png",
@@ -126,15 +165,15 @@ window.PORTFOLIO = {
       org: "Korean Grill House",
       role: "Server",
       dates: "Jun 2025 – present",
-      summary: "Run multiple tables during busy service and relay orders and changes between front of house and the kitchen."
+      summary: "Serve 10+ tables at once during peak hours in a high-volume restaurant serving 200–300 guests on busy nights, relaying orders and special requests to the kitchen accurately under time pressure."
     },
     {
       logo: "assets/experience/york-university.png",
       emoji: "🎓",
       org: "York University",
-      role: "BEng Software Engineering",
-      dates: "Sep 2026 – 2030",
-      summary: ""
+      role: "BEng Software Engineering, Lassonde School of Engineering",
+      dates: "Sep 2026 – Apr 2031",
+      summary: "🏆 York University Entrance Scholarship"
     }
   ]
 };

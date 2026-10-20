@@ -73,17 +73,33 @@
   }
 
   /* ---------- Skills ---------- */
-  function renderSkills() {
-    var html = (data.skills || []).map(function (s) {
+  function iconSrc(icon) {
+    if (/^https?:\/\//.test(icon)) return icon;              // full link to a logo
+    return "assets/icons/" + (icon.indexOf(".") === -1 ? icon + ".svg" : icon);
+  }
+  function renderSkillItems(items) {
+    return (items || []).map(function (s) {
       var mono = MONO_ICONS.indexOf(s.icon) !== -1 ? ' class="mono-icon"' : "";
       return (
         '<li class="skill">' +
-          '<span class="skill-icon"><img src="assets/icons/' + esc(s.icon.indexOf(".") === -1 ? s.icon + ".svg" : s.icon) + '" alt=""' + mono + ' width="26" height="26"></span>' +
+          '<span class="skill-icon"><img src="' + esc(iconSrc(s.icon || "")) + '" alt=""' + mono + ' width="26" height="26" loading="lazy"></span>' +
           '<span class="skill-name">' + esc(s.name) + "</span>" +
         "</li>"
       );
     }).join("");
-    $("skill-list").innerHTML = html;
+  }
+  function renderSkills() {
+    var skills = data.skills || [];
+    // Accept either grouped skills ({ group, items }) or a flat list.
+    var groups = skills.length && skills[0].items ? skills : [{ group: "", items: skills }];
+    $("skill-list").innerHTML = groups.map(function (g) {
+      return (
+        '<div class="skill-group">' +
+          (g.group ? '<h3 class="skill-group-title mono">' + esc(g.group.toLowerCase()) + "</h3>" : "") +
+          '<ul class="skill-grid">' + renderSkillItems(g.items) + "</ul>" +
+        "</div>"
+      );
+    }).join("");
   }
 
   /* ---------- Experience ---------- */
