@@ -88,11 +88,14 @@
   /* ---------- Experience ---------- */
   function renderExperience() {
     var html = (data.experience || []).map(function (e) {
+      var badge = e.logo
+        ? '<img src="' + esc(e.logo) + '" alt="' + esc(e.org) + ' logo" loading="lazy" width="52" height="52">'
+        : '<span aria-hidden="true">' + esc(e.emoji || (e.org || "?").charAt(0)) + "</span>";
       return (
-        '<li class="' + (e.current ? "current" : "") + '">' +
-          '<span class="node" aria-hidden="true"></span>' +
+        "<li>" +
+          '<span class="node">' + badge + "</span>" +
           '<div class="dates mono">' + esc(e.dates) + "</div>" +
-          '<div class="title">' + (e.emoji ? esc(e.emoji) + " " : "") + esc(e.org) + (e.role ? " · " + esc(e.role) : "") + "</div>" +
+          '<div class="title">' + esc(e.org) + (e.role ? " · " + esc(e.role) : "") + "</div>" +
           (e.summary ? '<div class="desc">' + esc(e.summary) + "</div>" : "") +
         "</li>"
       );

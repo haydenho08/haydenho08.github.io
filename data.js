@@ -92,48 +92,49 @@ window.PORTFOLIO = {
 
   /*
     Experience (newest first)
-    current: true highlights the dot on the timeline
+    logo:  image in assets/experience/ shown in the timeline circle.
+           Leave "" to show the emoji instead.
   */
   experience: [
     {
+      logo: "assets/experience/arbalest-rocketry.png",
       emoji: "🚀",
       org: "Arbalest Rocketry",
       role: "Payload Software",
       dates: "Sep 2026 – present",
-      summary: "Contributing to payload systems software and exploring embedded development on the STM32 NUCLEO-H723ZG.",
-      current: true
+      summary: "Contributing to payload systems software and exploring embedded development on the STM32 NUCLEO-H723ZG."
     },
     {
+      logo: "assets/experience/cshub.png",
       emoji: "",
       org: "CSHub",
       role: "Member",
       dates: "Sep 2026 – present",
-      summary: "York University computer science community.",
-      current: false
+      summary: "York University computer science community."
     },
     {
+      logo: "assets/experience/gdg-york.png",
       emoji: "",
       org: "Google Developer Group York",
       role: "Member",
       dates: "Sep 2026 – present",
-      summary: "",
-      current: false
+      summary: ""
     },
     {
+      logo: "assets/experience/korean-grill-house.png",
       emoji: "",
       org: "Korean Grill House",
       role: "Server",
       dates: "Jun 2025 – present",
-      summary: "Run multiple tables during busy service and relay orders and changes between front of house and the kitchen.",
-      current: false
+      summary: "Run multiple tables during busy service and relay orders and changes between front of house and the kitchen."
     },
     {
+      logo: "",
       emoji: "🎓",
       org: "York University",
       role: "BEng Software Engineering",
       dates: "Sep 2026 – 2030",
-      summary: "",
-      current: false
+      summary: ""
     }
   ]
 };
