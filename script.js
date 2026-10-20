@@ -141,12 +141,41 @@
     syncToggle();
   }
 
+  /* ---------- Scroll reveal ---------- */
+  // Fades and slides items up as they scroll into view. Items in the same
+  // group (cards, skill tiles, timeline entries) arrive one after another.
+  // Skipped entirely for visitors who turn off motion, so content is never hidden.
+  function setupReveal() {
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce || !("IntersectionObserver" in window)) return;
+
+    var items = document.querySelectorAll(".section-head, .project, .skill, .timeline li, .footer-main");
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+
+    Array.prototype.forEach.call(items, function (el) {
+      var siblings = Array.prototype.filter.call(el.parentNode.children, function (c) { return c.matches(".project, .skill, .timeline li"); });
+      var index = siblings.indexOf(el);
+      el.style.setProperty("--reveal-delay", (index > 0 ? Math.min(index, 7) * 70 : 0) + "ms");
+      el.setAttribute("data-reveal", "");
+      observer.observe(el);
+    });
+    root.classList.add("reveal-on");
+  }
+
   renderHero();
   renderProjects();
   renderSkills();
   renderExperience();
   renderFooter();
   syncToggle();
+  setupReveal();
 
   $("theme-toggle").addEventListener("click", function () {
     setTheme(isDark() ? "light" : "dark");
