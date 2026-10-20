@@ -141,7 +141,7 @@ window.PORTFOLIO = {
       org: "Arbalest Rocketry",
       role: "Payload Software Team Member",
       dates: "Sep 2026 – present",
-      summary: "Developing embedded C firmware in STM32CubeIDE for the rocket's science payload on an STM32H723 (Arm Cortex-M7), targeting the team's next Launch Canada competition. Configuring GPIO, UART and I²C with STM32 HAL as the sensor-communication foundation for payload data acquisition, and integrating changes with the payload and avionics teams through GitHub."
+      summary: "Writing embedded C firmware for the rocket's science payload on an STM32H723 (Arm Cortex-M7), setting up GPIO, UART and I²C with STM32 HAL for payload data acquisition."
     },
     {
       logo: "assets/experience/cshub.png",
@@ -165,7 +165,7 @@ window.PORTFOLIO = {
       org: "Korean Grill House",
       role: "Server",
       dates: "Jun 2025 – present",
-      summary: "Serve 10+ tables at once during peak hours in a high-volume restaurant serving 200–300 guests on busy nights, relaying orders and special requests to the kitchen accurately under time pressure."
+      summary: "Handle 10+ tables at once on busy 200–300-guest nights, keeping orders accurate under time pressure."
     },
     {
       logo: "assets/experience/york-university.png",
