@@ -113,18 +113,18 @@ window.PORTFOLIO = {
     },
     {
       emoji: "",
-      org: "Korean Grill House",
-      role: "Server",
-      dates: "Jun 2025 – present",
-      summary: "Run multiple tables during busy service and relay orders and changes between front of house and the kitchen.",
+      org: "Google Developer Group York",
+      role: "Member",
+      dates: "Sep 2026 – present",
+      summary: "",
       current: false
     },
     {
       emoji: "",
-      org: "Bayview Engineering Club",
-      role: "Executive",
-      dates: "2024 – 2026",
-      summary: "Planned design and technology activities with the executive team.",
+      org: "Korean Grill House",
+      role: "Server",
+      dates: "Jun 2025 – present",
+      summary: "Run multiple tables during busy service and relay orders and changes between front of house and the kitchen.",
       current: false
     },
     {

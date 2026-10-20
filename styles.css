@@ -24,24 +24,7 @@
   --radius: 14px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0d1117;
-    --fg: #e6edf3;
-    --muted: #9aa4b0;
-    --line: #262c36;
-    --soft: #161b22;
-    --card: #161b22;
-    --chip: #1f2630;
-    --accent: #3fb950;
-    --on-accent: #0d1117;
-    --pill: #0f2a17;
-    --pill-line: #238636;
-    --ok: #3fb950;
-    --icon-mono-filter: invert(1);
-    color-scheme: dark;
-  }
-}
+/* Light is the default for everyone; dark only when the visitor picks it with the toggle. */
 :root[data-theme="dark"] {
   --bg: #0d1117;
   --fg: #e6edf3;

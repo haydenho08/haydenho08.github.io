@@ -121,13 +121,9 @@
 
   /* ---------- Theme toggle ---------- */
   var root = document.documentElement;
-  var media = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
 
   function isDark() {
-    var t = root.getAttribute("data-theme");
-    if (t === "dark") return true;
-    if (t === "light") return false;
-    return !!(media && media.matches);
+    return root.getAttribute("data-theme") === "dark";
   }
   function syncToggle() {
     var dark = isDark();
@@ -151,10 +147,6 @@
   $("theme-toggle").addEventListener("click", function () {
     setTheme(isDark() ? "light" : "dark");
   });
-  if (media) {
-    if (media.addEventListener) media.addEventListener("change", syncToggle);
-    else if (media.addListener) media.addListener(syncToggle);
-  }
   if (window.MutationObserver) {
     new MutationObserver(syncToggle).observe(root, { attributes: true, attributeFilter: ["data-theme"] });
   }
