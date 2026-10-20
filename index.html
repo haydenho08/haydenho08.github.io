@@ -95,7 +95,11 @@
       <span class="eyebrow mono">~/contact</span>
       <h2>Let's talk.</h2>
       <p class="muted" id="contact-line"></p>
-      <a class="email" id="contact-email" href="#"></a>
+      <div class="email-row">
+        <a class="email" id="contact-email" href="#"></a>
+        <button type="button" class="copy-chip" id="contact-copy" aria-label="Copy email address"></button>
+      </div>
+      <p class="visually-hidden" id="copy-status" role="status" aria-live="polite"></p>
       <div class="footer-links" id="footer-links"></div>
     </div>
     <p class="mono small muted" id="footer-meta"></p>
