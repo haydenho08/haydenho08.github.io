@@ -19,7 +19,8 @@
   /* ---------- Hero ---------- */
   function renderHero() {
     $("status").textContent = profile.status || "";
-    $("hero-title").textContent = "Hi, I'm " + (profile.name || "") + (profile.greetingEmoji ? " " + profile.greetingEmoji : "");
+    $("hero-title").innerHTML = "Hi, I'm " + esc(profile.name || "") +
+      (profile.greetingEmoji ? ' <span class="wave" aria-hidden="true">' + esc(profile.greetingEmoji) + "</span>" : "");
     $("subline").textContent = profile.subline || "";
     $("bio").textContent = profile.bio || "";
     $("brand").textContent = profile.name || "";
