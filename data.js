@@ -16,7 +16,7 @@ window.PORTFOLIO = {
   profile: {
     name: "Hayden Ho",
     greetingEmoji: "👋",
-    status: "open to Summer 2027 internships",
+    status: "Looking for Summer 2027 internships",
     subline: "software engineering @ york u · payload software @ arbalest rocketry",
     bio: "I'm a first-year Software Engineering student who likes building software and is learning to run it close to the hardware. Right now that means rocket payload code and embedded development on STM32.",
     email: "hydnho@gmail.com",
@@ -129,7 +129,7 @@ window.PORTFOLIO = {
       summary: "Run multiple tables during busy service and relay orders and changes between front of house and the kitchen."
     },
     {
-      logo: "",
+      logo: "assets/experience/york-university.png",
       emoji: "🎓",
       org: "York University",
       role: "BEng Software Engineering",
