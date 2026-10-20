@@ -18,7 +18,7 @@ window.PORTFOLIO = {
     greetingEmoji: "👋",
     status: "Looking for Summer 2027 internships",
     subline: "software engineering @ york u · payload software @ arbalest rocketry",
-    bio: "I'm a first-year Software Engineering student who likes building software and is learning to run it close to the hardware. Right now that means rocket payload code and embedded development on STM32.",
+    bio: "I'm a first-year Software Engineering student at York University interested in software and embedded systems. I'm currently developing rocket payload software and working with STM32 microcontrollers. Outside of school, I enjoy rock climbing and playing video games.",
     email: "hydnho@gmail.com",
     github: "https://github.com/haydenho08",
     linkedin: "https://linkedin.com/in/hayden-ho-b49485326",
