@@ -77,7 +77,7 @@
       var mono = MONO_ICONS.indexOf(s.icon) !== -1 ? ' class="mono-icon"' : "";
       return (
         '<li class="skill">' +
-          '<span class="skill-icon"><img src="assets/icons/' + esc(s.icon) + '.svg" alt=""' + mono + ' width="26" height="26"></span>' +
+          '<span class="skill-icon"><img src="assets/icons/' + esc(s.icon.indexOf(".") === -1 ? s.icon + ".svg" : s.icon) + '" alt=""' + mono + ' width="26" height="26"></span>' +
           '<span class="skill-name">' + esc(s.name) + "</span>" +
         "</li>"
       );

@@ -76,14 +76,14 @@ window.PORTFOLIO = {
 
   /*
     Skills
-    icon:  file name in assets/icons/ (without .svg)
+    icon:  file name in assets/icons/ (".svg" is assumed; include the extension for other types, e.g. "c.png")
     Logos come from devicon.dev and simpleicons.org.
   */
   skills: [
     { name: "Python",     icon: "python" },
     { name: "Java",       icon: "java" },
     { name: "JavaScript", icon: "javascript" },
-    { name: "C",          icon: "c" },
+    { name: "C",          icon: "c.png" },
     { name: "Git",        icon: "git" },
     { name: "GitHub",     icon: "github" },
     { name: "VS Code",    icon: "vscode" },
