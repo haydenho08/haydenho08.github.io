@@ -86,7 +86,7 @@ a:hover { color: var(--accent); }
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
   gap: 12px; padding-block: 14px;
 }
-.brand { font-weight: 600; font-size: 1.0625rem; }
+.brand { font-weight: 600; font-size: 1.0625rem; min-height: 44px; display: inline-flex; align-items: center; }
 .nav-links { display: flex; flex-wrap: wrap; align-items: center; gap: 2px; font-size: .875rem; }
 .nav-links > a:not(.pill-link) { padding: 12px 10px; }
 .pill-link {
@@ -245,7 +245,7 @@ a:hover { color: var(--accent); }
   display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 28px;
 }
 .footer-main { display: flex; flex-direction: column; gap: 10px; max-width: 560px; min-width: 0; }
-.email { font-size: 1.125rem; font-weight: 600; color: var(--accent); overflow-wrap: anywhere; }
+.email { font-size: 1.125rem; font-weight: 600; color: var(--accent); overflow-wrap: anywhere; min-height: 44px; display: inline-flex; align-items: center; }
 .email-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
 
 /* Copy email buttons */
@@ -273,9 +273,10 @@ button.btn:hover { color: var(--accent); }
   .hero { padding-block: 56px 56px; }
   .section { padding-block: 48px; }
   .nav-links > a:not(.pill-link) { padding: 12px 7px; }
-  .skill { padding: 12px; gap: 10px; }
-  .skill-icon { width: 38px; height: 38px; }
-  .skill-icon img { width: 22px; height: 22px; }
+  .skill { padding: 10px; gap: 8px; }
+  .skill-icon { width: 32px; height: 32px; border-radius: 8px; }
+  .skill-icon img { width: 20px; height: 20px; }
+  .skill-name { font-size: .875rem; overflow-wrap: normal; word-break: normal; }
 }
 
 /* Scroll reveal (only active once script.js adds .reveal-on, so content shows without JS) */
