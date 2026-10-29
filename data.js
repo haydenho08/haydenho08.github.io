@@ -33,7 +33,7 @@ window.PORTFOLIO = {
 
   /*
     Projects
-    status:  "In progress" or "Complete"
+    status:  "In progress", "Live" or "Complete" (Live and Complete show in green)
     result:  one line with a real number, e.g. "Monitors 120 sites per minute with 99.8% alert delivery"
     image:   a screenshot in assets/projects/, e.g. "assets/projects/studyflow.png"
     github / demo:  links. Leave "" to hide.
@@ -42,14 +42,14 @@ window.PORTFOLIO = {
     {
       folder: "studyflow",
       title: "StudyFlow",
-      status: "In progress",
+      status: "Live",
       date: "Oct 2026",
-      summary: "A full-stack student productivity platform. Assignments are organized by course with deadline prioritization, study-session tracking and progress analytics, served by a FastAPI REST API backed by PostgreSQL.",
-      result: "",
-      tags: ["react", "typescript", "python", "fastapi", "postgresql"],
-      image: "",
-      github: "",
-      demo: ""
+      summary: "A full-stack productivity app for students: track courses and deadlines on a calendar week view, focus with a Pomodoro timer that logs study time per course, and see weekly stats. Every query is scoped to the logged-in user, and dates stay correct across time zones and daylight saving.",
+      result: "168 automated tests (108 pytest, 60 Vitest) run in GitHub Actions CI on every commit; deployed as one Docker container with a one-click demo account.",
+      tags: ["react", "typescript", "fastapi", "postgresql", "docker", "github actions"],
+      image: "assets/projects/studyflow.webp",
+      github: "https://github.com/haydenho08/studyflow",
+      demo: "https://studyflow-q3u0.onrender.com"
     },
     {
       folder: "pulsewatch",

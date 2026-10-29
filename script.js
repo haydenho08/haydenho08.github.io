@@ -49,9 +49,11 @@
   /* ---------- Projects ---------- */
   function renderProjects() {
     var html = (data.projects || []).map(function (p) {
-      var done = /complete/i.test(p.status || "");
+      var done = /complete|live/i.test(p.status || "");
       var media = p.image
-        ? '<img src="' + esc(p.image) + '" alt="Screenshot of ' + esc(p.title) + '" loading="lazy">'
+        ? (p.demo ? '<a class="media-link" href="' + esc(p.demo) + '"' + externalAttrs(p.demo) + ' tabindex="-1" aria-hidden="true">' : "") +
+          '<img src="' + esc(p.image) + '" alt="Screenshot of ' + esc(p.title) + '" loading="lazy" width="1280" height="800">' +
+          (p.demo ? "</a>" : "")
         : '<span class="mono">screenshot coming soon</span>';
       var tags = (p.tags || []).map(function (t) { return '<li class="tag">' + esc(t) + "</li>"; }).join("");
       var links = [];
